@@ -186,13 +186,13 @@
         <h1 class="container mx-auto border-t-2 border-dashed mb-10 mt-8"></h1>
         <div class="grid grid-cols-1 lg:grid-cols-4">
           <div class="mt-9">
-            <div class="flex justify-center items-center mb-7">
+            <div class="flex justify-center items-center mb-7 transform rotate-180">
               <div
                 class="radial-progress text-[#ff4240]"
                 style="--value: 87; --size: 8rem; --thickness: 1rem"
                 role="progressbar"
               >
-                87%
+                <span class="text-3xl text-black font-extrabold transform rotate-180">87%</span>
               </div>
             </div>
             <div
@@ -205,13 +205,13 @@
             </div>
           </div>
           <div class="mt-9">
-            <div class="flex justify-center items-center mb-7">
+            <div class="flex justify-center items-center mb-7 transform rotate-180">
               <div
                 class="radial-progress text-[#49d293]"
                 style="--value: 95; --size: 8rem; --thickness: 1rem"
                 role="progressbar"
               >
-                95%
+                <span class="text-3xl text-black font-extrabold transform rotate-180">95%</span>
               </div>
             </div>
             <div
@@ -224,13 +224,13 @@
             </div>
           </div>
           <div class="mt-9">
-            <div class="flex justify-center items-center mb-7">
+            <div class="flex justify-center items-center mb-7 transform rotate-180">
               <div
                 class="radial-progress text-[#ffb546]"
                 style="--value: 90; --size: 8rem; --thickness: 1rem"
                 role="progressbar"
               >
-                90%
+                <span class="text-3xl text-black font-extrabold transform rotate-180">90%</span>
               </div>
             </div>
             <div
@@ -243,13 +243,13 @@
             </div>
           </div>
           <div class="mt-9">
-            <div class="flex justify-center items-center mb-7">
+            <div class="flex justify-center items-center mb-7 transform rotate-180">
               <div
                 class="radial-progress text-[#4c8df1]"
                 style="--value: 80; --size: 8rem; --thickness: 1rem"
                 role="progressbar"
               >
-                80%
+                <span class="text-3xl text-black font-extrabold transform rotate-180">80%</span>
               </div>
             </div>
             <div
@@ -708,16 +708,6 @@
                 <p>hello</p>
               </div>
             </div>
-            <hr>
-            <div class="collapse collapse-plus">
-              <input type="radio" name="my-accordion-3" />
-              <div class="collapse-title text-xl font-medium">
-                Click to open this one and close others
-              </div>
-              <div class="collapse-content">
-                <p>hello</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -753,8 +743,8 @@
                 src="./Images/Group 1171275318.png"
                 alt=""
               />
-              <h1>Phone Number :</h1>
-              <h1>(+62) 123-321-543</h1>
+              <h1>Email : </h1>
+              <h1>hockeys@support.com</h1>
             </div>
             <div class="bg-[#629CF31A] p-8 rounded-2xl">
               <img
@@ -762,29 +752,13 @@
                 src="./Images/Group 1171275321.png"
                 alt=""
               />
-              <h1>Phone Number :</h1>
-              <h1>(+62) 123-321-543</h1>
+              <h1>Location :</h1>
+              <h1>52/1 Mohakhali Wireless Gate</h1>
             </div>
           </div>
           <!-- right div -->
           <div class="col-span-1 lg:col-span-2 p-4">
             <form class="grid grid-cols-1 lg:grid-cols-2 gap-3 px-2" action="">
-              <div class="space-y-6 col-span-2 lg:col-span-1">
-                <label for="">Your Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter your email"
-                  class="bg-[#13131805] input input-bordered w-full"
-                />
-              </div>
-              <div class="space-y-6 col-span-2 lg:col-span-1">
-                <label for="">Your Email</label>
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  class="bg-[#13131805] input input-bordered w-full"
-                />
-              </div>
               <div class="space-y-6 col-span-2 lg:col-span-1">
                 <label for="">Your Name</label>
                 <input
@@ -798,6 +772,22 @@
                 <input
                   type="email"
                   placeholder="Enter your email"
+                  class="bg-[#13131805] input input-bordered w-full"
+                />
+              </div>
+              <div class="space-y-6 col-span-2 lg:col-span-1">
+                <label for="">Subject</label>
+                <input
+                  type="text"
+                  placeholder="Enter your subject"
+                  class="bg-[#13131805] input input-bordered w-full"
+                />
+              </div>
+              <div class="space-y-6 col-span-2 lg:col-span-1">
+                <label for="">Phone Number</label>
+                <input
+                  type="number"
+                  placeholder="Enter your phone number"
                   class="bg-[#13131805] input input-bordered w-full"
                 />
               </div>
