@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- daisy and tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind customization -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "des-color": "#13131899",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container mx-auto py-6">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a class="font-bold">Home</a></li>
+                <li><a class="font-bold">About</a></li>
+                <li><a class="font-bold">Pages</a></li>
+                <li><a class="font-bold">Blog</a></li>
+                <li><a class="font-bold">contact</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-4xl font-extrabold">Hockey’s</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+            <a class="btn ml-6 py-3 lg:px-4 bg-[#FF4240]">Get Ticket</a>
+          </div>
+        </div>
+      </nav>
+      <!-- banner section with slider  -->
+
+      <div class="container mx-auto relative p-4">
+        <div class="carousel w-full">
+          <!-- slide one -->
+          <div id="slide1" class="carousel-item relative w-full">
+            <img
+              src="./Images/1.png"
+              class="w-full lg:h-[80vh] h-[40vh] object-cover"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 bottom-3 left-8 space-x-7"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- slide two -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img
+              src="./Images/1.png"
+              class="w-full lg:h-[80vh] h-[40vh] object-cover"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 bottom-3 left-8 space-x-7"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- slide three -->
+          <div id="slide3" class="carousel-item relative w-full">
+            <img
+              src="./Images/1.png"
+              class="w-full lg:h-[80vh] h-[40vh] object-cover"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 bottom-3 left-8 space-x-7"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- slide four -->
+          <div id="slide4" class="carousel-item relative w-full">
+            <img
+              src="./Images/1.png"
+              class="w-full lg:h-[80vh] h-[40vh] object-cover"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 bottom-3 left-8 space-x-7"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-[#131318] mt-4 lg:w-1/2 h-auto rounded-2xl space-y-4 p-8 absolute lg:right-8 lg:bottom-10 mr-4"
+        >
+          <h1 class="font-normal text-white text-4xl">
+            Meet all the heroes from the field
+          </h1>
+          <p class="text-[#FFFFFF99]">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Professional Hockeys Club -->
+      <section class="container mx-auto py-6 mt-[350px] lg:mt-24 p-3">
+        <div
+          class="flex flex-col justify-center items-center gap-2 text-center w-1/2 mx-auto"
+        >
+          <h1 class="text-3xl font-extrabold">Professional Hockeys Club</h1>
+          <p class="text-des-color">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-4">
+          <div class="mt-9">
+            <div class="flex justify-center items-center mb-7">
+              <div
+                class="radial-progress text-[#ff4240]"
+                style="--value: 87; --size: 8rem; --thickness: 1rem"
+                role="progressbar"
+              >
+                87%
+              </div>
+            </div>
+            <div
+              class="space-y-5 flex justify-center items-center flex-col text-center"
+            >
+              <h2 class="text-xl font-semibold">Prayer Facility</h2>
+              <p class="text-des-color">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+          <div class="mt-9">
+            <div class="flex justify-center items-center mb-7">
+              <div
+                class="radial-progress text-[#49d293]"
+                style="--value: 95; --size: 8rem; --thickness: 1rem"
+                role="progressbar"
+              >
+                95%
+              </div>
+            </div>
+            <div
+              class="space-y-5 flex justify-center items-center flex-col text-center"
+            >
+              <h2 class="text-xl font-semibold">Prayer Facility</h2>
+              <p class="text-des-color">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+          <div class="mt-9">
+            <div class="flex justify-center items-center mb-7">
+              <div
+                class="radial-progress text-[#ffb546]"
+                style="--value: 90; --size: 8rem; --thickness: 1rem"
+                role="progressbar"
+              >
+                90%
+              </div>
+            </div>
+            <div
+              class="space-y-5 flex justify-center items-center flex-col text-center"
+            >
+              <h2 class="text-xl font-semibold">Prayer Facility</h2>
+              <p class="text-des-color">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+          <div class="mt-9">
+            <div class="flex justify-center items-center mb-7">
+              <div
+                class="radial-progress text-[#4c8df1]"
+                style="--value: 80; --size: 8rem; --thickness: 1rem"
+                role="progressbar"
+              >
+                80%
+              </div>
+            </div>
+            <div
+              class="space-y-5 flex justify-center items-center flex-col text-center"
+            >
+              <h2 class="text-xl font-semibold">Prayer Facility</h2>
+              <p class="text-des-color">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Program Sections -->
+      <section class="container mx-auto p-3 lg:py-6 lg:mt-[20px] lg:mt-24">
+        <div
+          class="flex flex-col justify-center items-center gap-2 text-center lg:w-1/2 mx-auto"
+        >
+          <h1 class="text-3xl font-extrabold">Program Sections</h1>
+          <p class="text-des-color">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div
+            class="lg:col-span-6 text-white space-y-2 bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(Images/2.png)] bg-cover lg:pt-20 pl-10 pb-4 rounded-lg lg:h-[340px] space-y-4 w-full bg-cover"
+          >
+            <h1 class="text-3xl font-extrabold mt-10">Junior Program</h1>
+            <p class="lg:w-[500px]">
+              Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+              enim sagittis turpis in magna. Id et sed euismod natoque amet nunc
+              morbi nulla. Tortor congue sed et in.
+            </p>
+            <a class="btn lg:w-[30%] py-3 lg:px-4 bg-[#FF4240] border-none"
+              >Get Ticket</a
+            >
+          </div>
+          <div
+            class="lg:col-span-6 text-white space-y-2 bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(Images/3.png)] bg-cover lg:pt-20 pl-10 pb-4 rounded-lg lg:h-[340px] space-y-4 w-full bg-cover"
+          >
+            <h1 class="text-3xl font-extrabold mt-10">Junior Program</h1>
+            <p class="lg:w-[500px]">
+              Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+              enim sagittis turpis in magna. Id et sed euismod natoque amet nunc
+              morbi nulla. Tortor congue sed et in.
+            </p>
+            <a class="btn lg:w-[30%] py-3 lg:px-4 bg-[#FF4240] border-none"
+              >Get Ticket</a
+            >
+          </div>
+          <div
+            class="lg:col-span-12 text-white space-y-2 bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(Images/4.png)] bg-cover lg:pt-20 pl-10 pb-4 rounded-lg lg:h-[340px] space-y-4 w-full bg-cover"
+          >
+            <h1 class="text-3xl font-extrabold mt-10">Junior Program</h1>
+            <p class="lg:w-[500px]">
+              Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+              enim sagittis turpis in magna. Id et sed euismod natoque amet nunc
+              morbi nulla. Tortor congue sed et in.
+            </p>
+            <a class="btn lg:w-[15%] py-3 lg:px-4 bg-[#FF4240] border-none"
+              >Get Ticket</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- our new product section -->
+      <section class="container mx-auto">
+        <div
+          class="flex flex-col justify-center items-center gap-2 text-center lg:w-1/2 mx-auto"
+        >
+          <h1 class="text-3xl font-extrabold">Our New Products</h1>
+          <p class="text-des-color w-2/3">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+        <!-- first card -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:p-6 gap-6">
+          <div class="flex flex-col lg:flex-row gap-6 border p-7">
+            <!-- card image -->
+            <div class="p-10 lg:p-0">
+              <img class="w-full h-full" src="./Images/5.png" alt="" />
+            </div>
+            <!-- card content -->
+            <div class="">
+              <div class="flex justify-center lg:justify-start">
+                <div class="flex lg:justify-start items-center gap-2 mb-4">
+                  <img class="w-5 h-5" src="./Images/frame/Frame.png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex items-center mb-4 ml-4 gap-2">
+                  <img class="" src="./Images/frame/Frame (1).png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex justify-start ml-3 gap-2">
+                  <img
+                    class="w-5 h-5"
+                    src="./Images/frame/Frame (2).png"
+                    alt=""
+                  />
+                  <h1>5.0</h1>
+                </div>
+              </div>
+              <div
+                class="flex justify-center flex-col gap-3 text-center lg:text-left"
+              >
+                <h1 class="text-5 font-extrabold">World Cup Flags Football</h1>
+                <p class="lg:w-2/3 text-des-color mb-3">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+              </div>
+              <div class="flex justify-start flex-col lg:flex-row">
+                <div class="text-center">
+                  <h1 class="text-red-500 text-2xl">Price - $22.00</h1>
+                </div>
+                <div class="flex items-center gap-2 lg:ml-4 mx-auto">
+                  <img
+                    class="w-5 h-5"
+                    src="Images/frame/Frame (1).svg"
+                    alt=""
+                  />
+                  <h1 class="text-des-color">Delivery Fee : Free</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-6 border p-7">
+            <!-- card image -->
+            <div class="p-10 lg:p-0">
+              <img class="w-full h-full" src="./Images/6.png" alt="" />
+            </div>
+            <!-- card content -->
+            <div class="">
+              <div class="flex justify-center lg:justify-start">
+                <div class="flex lg:justify-start items-center gap-2 mb-4">
+                  <img class="w-5 h-5" src="./Images/frame/Frame.png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex items-center mb-4 ml-4 gap-2">
+                  <img class="" src="./Images/frame/Frame (1).png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex justify-start ml-3 gap-2">
+                  <img
+                    class="w-5 h-5"
+                    src="./Images/frame/Frame (2).png"
+                    alt=""
+                  />
+                  <h1>5.0</h1>
+                </div>
+              </div>
+              <div
+                class="flex justify-center flex-col gap-3 text-center lg:text-left"
+              >
+                <h1 class="text-5 font-extrabold">World Cup Flags Football</h1>
+                <p class="lg:w-2/3 text-des-color mb-3">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+              </div>
+              <div class="flex justify-start flex-col lg:flex-row">
+                <div class="text-center">
+                  <h1 class="text-red-500 text-2xl">Price - $22.00</h1>
+                </div>
+                <div class="flex items-center gap-2 lg:ml-4 mx-auto">
+                  <img
+                    class="w-5 h-5"
+                    src="Images/frame/Frame (1).svg"
+                    alt=""
+                  />
+                  <h1 class="text-des-color">Delivery Fee : Free</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-6 border p-7">
+            <!-- card image -->
+            <div class="p-10 lg:p-0">
+              <img class="w-full h-full" src="./Images/7.png" alt="" />
+            </div>
+            <!-- card content -->
+            <div class="">
+              <div class="flex justify-center lg:justify-start">
+                <div class="flex lg:justify-start items-center gap-2 mb-4">
+                  <img class="w-5 h-5" src="./Images/frame/Frame.png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex items-center mb-4 ml-4 gap-2">
+                  <img class="" src="./Images/frame/Frame (1).png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex justify-start ml-3 gap-2">
+                  <img
+                    class="w-5 h-5"
+                    src="./Images/frame/Frame (2).png"
+                    alt=""
+                  />
+                  <h1>5.0</h1>
+                </div>
+              </div>
+              <div
+                class="flex justify-center flex-col gap-3 text-center lg:text-left"
+              >
+                <h1 class="text-5 font-extrabold">World Cup Flags Football</h1>
+                <p class="lg:w-2/3 text-des-color mb-3">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+              </div>
+              <div class="flex justify-start flex-col lg:flex-row">
+                <div class="text-center">
+                  <h1 class="text-red-500 text-2xl">Price - $22.00</h1>
+                </div>
+                <div class="flex items-center gap-2 lg:ml-4 mx-auto">
+                  <img
+                    class="w-5 h-5"
+                    src="Images/frame/Frame (1).svg"
+                    alt=""
+                  />
+                  <h1 class="text-des-color">Delivery Fee : Free</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-6 border p-7">
+            <!-- card image -->
+            <div class="p-10 lg:p-0">
+              <img class="w-full h-full" src="./Images/8.png" alt="" />
+            </div>
+            <!-- card content -->
+            <div class="">
+              <div class="flex justify-center lg:justify-start">
+                <div class="flex lg:justify-start items-center gap-2 mb-4">
+                  <img class="w-5 h-5" src="./Images/frame/Frame.png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex items-center mb-4 ml-4 gap-2">
+                  <img class="" src="./Images/frame/Frame (1).png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex justify-start ml-3 gap-2">
+                  <img
+                    class="w-5 h-5"
+                    src="./Images/frame/Frame (2).png"
+                    alt=""
+                  />
+                  <h1>5.0</h1>
+                </div>
+              </div>
+              <div
+                class="flex justify-center flex-col gap-3 text-center lg:text-left"
+              >
+                <h1 class="text-5 font-extrabold">World Cup Flags Football</h1>
+                <p class="lg:w-2/3 text-des-color mb-3">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+              </div>
+              <div class="flex justify-start flex-col lg:flex-row">
+                <div class="text-center">
+                  <h1 class="text-red-500 text-2xl">Price - $22.00</h1>
+                </div>
+                <div class="flex items-center gap-2 lg:ml-4 mx-auto">
+                  <img
+                    class="w-5 h-5"
+                    src="Images/frame/Frame (1).svg"
+                    alt=""
+                  />
+                  <h1 class="text-des-color">Delivery Fee : Free</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-6 border p-7">
+            <!-- card image -->
+            <div class="p-10 lg:p-0">
+              <img class="w-full h-full" src="./Images/9.png" alt="" />
+            </div>
+            <!-- card content -->
+            <div class="">
+              <div class="flex justify-center lg:justify-start">
+                <div class="flex lg:justify-start items-center gap-2 mb-4">
+                  <img class="w-5 h-5" src="./Images/frame/Frame.png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex items-center mb-4 ml-4 gap-2">
+                  <img class="" src="./Images/frame/Frame (1).png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex justify-start ml-3 gap-2">
+                  <img
+                    class="w-5 h-5"
+                    src="./Images/frame/Frame (2).png"
+                    alt=""
+                  />
+                  <h1>5.0</h1>
+                </div>
+              </div>
+              <div
+                class="flex justify-center flex-col gap-3 text-center lg:text-left"
+              >
+                <h1 class="text-5 font-extrabold">World Cup Flags Football</h1>
+                <p class="lg:w-2/3 text-des-color mb-3">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+              </div>
+              <div class="flex justify-start flex-col lg:flex-row">
+                <div class="text-center">
+                  <h1 class="text-red-500 text-2xl">Price - $22.00</h1>
+                </div>
+                <div class="flex items-center gap-2 lg:ml-4 mx-auto">
+                  <img
+                    class="w-5 h-5"
+                    src="Images/frame/Frame (1).svg"
+                    alt=""
+                  />
+                  <h1 class="text-des-color">Delivery Fee : Free</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-6 border p-7">
+            <!-- card image -->
+            <div class="p-10 lg:p-0">
+              <img class="w-full h-full" src="./Images/5.png" alt="" />
+            </div>
+            <!-- card content -->
+            <div class="">
+              <div class="flex justify-center lg:justify-start">
+                <div class="flex lg:justify-start items-center gap-2 mb-4">
+                  <img class="w-5 h-5" src="./Images/frame/Frame.png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex items-center mb-4 ml-4 gap-2">
+                  <img class="" src="./Images/frame/Frame (1).png" alt="" />
+                  <h1>5.0</h1>
+                </div>
+                <div class="flex justify-start ml-3 gap-2">
+                  <img
+                    class="w-5 h-5"
+                    src="./Images/frame/Frame (2).png"
+                    alt=""
+                  />
+                  <h1>5.0</h1>
+                </div>
+              </div>
+              <div
+                class="flex justify-center flex-col gap-3 text-center lg:text-left"
+              >
+                <h1 class="text-5 font-extrabold">World Cup Flags Football</h1>
+                <p class="lg:w-2/3 text-des-color mb-3">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                </p>
+              </div>
+              <div class="flex justify-start flex-col lg:flex-row">
+                <div class="text-center">
+                  <h1 class="text-red-500 text-2xl">Price - $22.00</h1>
+                </div>
+                <div class="flex items-center gap-2 lg:ml-4 mx-auto">
+                  <img
+                    class="w-5 h-5"
+                    src="Images/frame/Frame (1).svg"
+                    alt=""
+                  />
+                  <h1 class="text-des-color">Delivery Fee : Free</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- client question -->
+      <section class="container mx-auto lg:p-8">
+        <div
+          class="flex flex-col justify-center items-center gap-2 text-center lg:w-1/2 mx-auto"
+        >
+          <h1 class="text-3xl font-extrabold">Clients Question</h1>
+          <p class="text-des-color">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+        <div class="flex flex-col lg:flex-row border p-8">
+          <div class="">
+            <img src="./Images/11.png" alt="" />
+          </div>
+          <!-- first faq -->
+          <div class="ml-10">
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+                Our Equipment
+              </div>
+              <div class="collapse-content">
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
